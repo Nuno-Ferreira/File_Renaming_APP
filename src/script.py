@@ -23,5 +23,3 @@ def rename_files(directory: str, new_name: str) -> None:
 
             # Rename the file
             file.rename(new_file_name)
-
-    print("Files have been renamed successfully.")
