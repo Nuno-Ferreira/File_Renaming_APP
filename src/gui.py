@@ -23,9 +23,9 @@ def run_rename_files() -> None:
 
     if directory and new_name:
         rename_files(directory, new_name)
-        status_label.config(text="Files have been renamed successfully!", fg="green")
+        status_label.config(text="Files have been renamed successfully!", fg="green", font=("Arial", 12, "bold"))
     else:
-        status_label.config(text="Please select a directory and enter a name.", fg="red")
+        status_label.config(text="Please select a directory and enter a name.", fg="red", font=("Arial", 12, "bold"))
 
 def center_window(root, width=700, height=150):
     """Center the Tkinter window on the screen."""
