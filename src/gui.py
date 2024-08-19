@@ -3,6 +3,7 @@
 from tkinter import *
 from tkinter import ttk, filedialog
 import os
+from script import rename_files
 
 def search_for_file_path():
     """Open a file dialog to search for a directory."""
@@ -37,7 +38,7 @@ dir_path.grid(column=2, row=1, sticky=E)
 Label(mainframe, text="Folder Selected:").grid(column=1, row=1, sticky=E)
 Button(mainframe, text="Browse", command=search_for_file_path).grid(column=3, row=1, sticky=W)
 Label(mainframe, text="How would you like your files to be named?").grid(column=1, row=2, sticky=E)
-Button(mainframe, text="Rename").grid(column=2, row=3, sticky=N)
+Button(mainframe, text="Rename", command=lambda: rename_files(directory=dir_path.cget("text"), new_name=name_sequence.get())).grid(column=2, row=3, sticky=N)
 
 for child in mainframe.winfo_children(): 
     child.grid_configure(padx=5, pady=5)
